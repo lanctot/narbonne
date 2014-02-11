@@ -95,7 +95,7 @@ sub parsenextmove {
 
   if ($index > 0) {
     @move = split(' ', $moveline); 
-    #print "parsed move: $moveline\n";
+    print "parsed move: $moveline\n";
   }
   @parts = split(' ', $stateline); 
 
