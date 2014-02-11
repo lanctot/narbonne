@@ -3,7 +3,7 @@
 archive="narbonne.zip"
 
 rm -f $archive
-zip -r $archive *.txt *.cpp *.hpp scripts/*.sh scripts/*.pl 
+zip -r $archive CMakeLists.txt README.txt *.cpp *.hpp scripts/*.sh scripts/*.pl 
 
 echo "Re-created $archive"
 
