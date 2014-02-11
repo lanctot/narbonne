@@ -6,7 +6,7 @@ $| = 1;
 select $ofh;
 
 if (scalar(@ARGV) < 2) { 
-  print "Usage: ./test2p.perl <p1 command> <p2 command> <optional runname>\n";
+  print "Usage: sim2p.perl <p1 command> <p2 command> <optional runname>\n";
   exit;
 }
 

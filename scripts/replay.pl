@@ -130,7 +130,9 @@ sub undomove {
 
   if ($index > 0) {
     @move = split(' ', $moveline); 
-    print "parsed move: $moveline\n";
+
+    # enable to debug
+    # print "parsed move: $moveline\n";
   }
   @parts = split(' ', $stateline); 
 
@@ -144,7 +146,8 @@ sub undomove {
   $tiles_remaining = $parts[8];
   $player = $parts[4];
  
-  print "parsed state: $stateline\n";
+  # enable to debug
+  #print "parsed state: $stateline\n";
    
   $index++;
 

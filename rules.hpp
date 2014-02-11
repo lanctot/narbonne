@@ -181,7 +181,8 @@ class GameState {
 		// utility of a gamestate
 		double utility() const { 
 
-      // pass through tanh to normalize to [-1,1], then always in view of player 1
+      // pass through tanh to normalize to [-1,1], then multiply by 100 
+      // also, always in view of player 1
       double delta = static_cast<double>(m_score1) - static_cast<double>(m_score2);
       double exp = pow(2.7183, delta/10.0);  
       double util = 100.0*(exp - 1.0) / (exp + 1.0);

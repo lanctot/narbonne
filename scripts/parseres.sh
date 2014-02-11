@@ -1,8 +1,7 @@
 #!/bin/bash
 
-bots[0]="star1"
-bots[1]="star2"
-#bots[2]="star2"
+bots[0]="exp"
+bots[1]="simple"
 lastindex=1
 
 wins[0]=0

@@ -128,7 +128,7 @@ for (my $i = 0; $i < scalar(@algorithms); $i++)
       #my $errfile = "/scratch/dom/$search-$method-$sim.err.txt";
       #my $outfile = "/scratch/dom/$search-$method-$sim.out.txt"; 
 
-      my $fullcmd = "./test2p.perl \"$cmd1\" \"$cmd2\" $runname $seed >$runname.trace 2>$runname.trace";
+      my $fullcmd = "scripts/sim2p.pl \"$cmd1\" \"$cmd2\" $runname $seed >$runname.trace 2>$runname.trace";
       
       print "queueing $fullcmd\n";
       push(@jobs, $fullcmd); 
@@ -138,7 +138,7 @@ for (my $i = 0; $i < scalar(@algorithms); $i++)
 
       # now its swapped counterpart
       $runname = "$alg2-$alg1-$run"; 
-      $fullcmd = "./test2p.perl \"$cmd1\" \"$cmd2\" $runname $seed >$runname.trace 2>$runname.trace";
+      $fullcmd = "scripts/sim2p.pl \"$cmd1\" \"$cmd2\" $runname $seed >$runname.trace 2>$runname.trace";
       
       print "queueing $fullcmd\n";
       push(@jobs, $fullcmd); 
@@ -146,6 +146,7 @@ for (my $i = 0; $i < scalar(@algorithms); $i++)
   }
 }
 
+# first parm is the number of concurrent processes
 print "\n";
 &run_parallel(8, @jobs);
 
